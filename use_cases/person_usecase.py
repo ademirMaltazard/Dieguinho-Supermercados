@@ -7,7 +7,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 class PersonUseCase:
     @staticmethod
     def create_person(data):
-        data['password'] = generate_password_hash(data['password'])
+        data['password'] = 'senha'#generate_password_hash(data['password'])
         return PersonRepository.create(data)
 
     @staticmethod
